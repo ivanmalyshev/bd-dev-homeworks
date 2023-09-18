@@ -16,7 +16,21 @@
 
 ## Ответ
 
-[ссылка на md. файл](https://github.com/ivanmalyshev/bd-dev-homeworks/06-db-02-sql/docker.compose.yml)
+```
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: midx11011
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./postgres-backup:/var/lib/postgresql/backup
+```
+[ссылка на md. файл](https://github.com/ivanmalyshev/bd-dev-homeworks/blob/main/06-db-02-sql/docker-compose.yml)
 
 ## Задача 2
 
