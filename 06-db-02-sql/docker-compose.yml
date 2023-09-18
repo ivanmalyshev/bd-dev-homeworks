@@ -1,0 +1,13 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres:12
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: midx11011
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./postgres-backup:/var/lib/postgresql/backup
