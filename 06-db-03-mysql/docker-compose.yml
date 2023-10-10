@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - ./06-mysql/apps/mysql:/var/lib/mysql
+      - ./06-mysql/config/conf.d:/etc/mysql/conf.d
+    environment:
+      - MYSQL_DATABASE=netology_db
+      - MYSQL_ROOT_PASSWORD=midx11011
+      - MYSQL_PASSWORD=midx11011
+      - MYSQL_USER=netology_user
